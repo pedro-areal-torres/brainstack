@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "es6",  // Or "es2015"
+      "lib": ["es2015", "dom"],  // Include ES2015 for Set
+      "module": "commonjs",
+      "strict": true
+    }
+  }
+  
