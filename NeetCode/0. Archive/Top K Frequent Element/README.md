@@ -32,35 +32,9 @@ The task is to return the `k` most frequent elements in an integer array `nums`.
 
 ---
 
-## Solution Approaches
+## Solution
 
-### 1. Naive Sorting Solution
-
-- **Steps**:
-
-  1. Count the frequency of each number using a hash map.
-  2. Sort the entries in descending order by frequency.
-  3. Pick the top `k` elements.
-
-- **Time Complexity**: `O(n log n)` due to sorting.
-- **Space Complexity**: `O(n)` for the hash map.
-
----
-
-### 2. Heap Solution
-
-- **Steps**:
-
-  1. Use a hash map to store frequencies.
-  2. Push elements into a min-heap of size `k`.
-  3. Maintain the heap with the top `k` elements (smallest frequency at the root).
-
-- **Time Complexity**: `O(n log k)` for maintaining the heap.
-- **Space Complexity**: `O(n)` for the map and heap.
-
----
-
-### 3. Bucket Sort Solution (My Implementation)
+### Bucket Sort Solution
 
 - **Steps**:
 
