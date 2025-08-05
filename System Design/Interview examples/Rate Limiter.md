@@ -21,15 +21,15 @@ Control the number of requests a client can make to a server or service within a
 
 ## Architecture
 
-Client → Rate Limiter (Reverse Proxy) → Service/API
-↓
-Cached Rules Store
-↓
-Persistent Database
+Client → Rate Limiter (Reverse Proxy) (\*) → Service/API
+
+(\*) → Cached Rules Store → Persistent Database
 
 - The rate limiter acts before the actual service.
 - Reads from cached rules, with a background process to sync from the DB.
 - Uses an in-memory key-value store (e.g., Redis) to track requests.
+
+![alt text](img/rate-limiter.png)
 
 ## Rule Schema Example
 
